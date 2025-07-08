@@ -1,0 +1,8 @@
+pynput.keyboard
+pynput.mouse
+Crypto.Cipher._mode_gcm
+Crypto.Util.Padding
+Crypto.Random
+win32crypt
+pyautogui
+cv2
