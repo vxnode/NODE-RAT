@@ -7,7 +7,7 @@ I am NOT responsible for any misuse, damage, or legal consequences caused by thi
 This tool is provided "as is" for educational and authorized testing purposes only.  
 Use at your own risk and always obtain proper permission before accessing any system.
 
-Install all moudles and packages in the moudle.txt with this command
+Install all modules and packages in the moudle.txt with this command
 pip install -r moudle.txt
 
 For others it might not work so try these instead
