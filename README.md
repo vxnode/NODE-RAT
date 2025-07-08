@@ -7,7 +7,7 @@ I am NOT responsible for any misuse, damage, or legal consequences caused by thi
 This tool is provided "as is" for educational and authorized testing purposes only.  
 Use at your own risk and always obtain proper permission before accessing any system.
 
-
+It currently comes with 18 built-in commands, i know its not much but its just the start.
 
 Install all moudles and packages in the moudle.txt with this command
 pip install -r moudle.txt
