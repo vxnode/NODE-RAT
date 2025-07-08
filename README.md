@@ -20,7 +20,7 @@ python pip install -r moudle.txt
 Have had these problems with many diffrent computers
 
 Go to edit mode in Client.py, line 30
-And change to your computers IPv4
+and change to your computers IPv4.
 Now you're done and run the Server.py first just like a normal executable file.
 Diffrent for the Client.py, i crashes when trying to double click it.
 So rather go to cmd in the same directory and run
@@ -33,5 +33,5 @@ Open Command Promt and run this command
 ipconfig
 
 And copy the IPv4 address on your current running network.
-Make sure its not on any non connected wifi networks else it wont work
+Make sure its not on any non connected wifi networks else it wont work.
 Now replace this ip address into your client.py SERVER_IP = 
