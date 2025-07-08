@@ -1,6 +1,6 @@
-pynput
 opencv-python
 numpy
 pyautogui
-pywin32
+pynput
 pycryptodome
+pywin32
