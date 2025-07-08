@@ -23,7 +23,7 @@ ascii_banner = r"""
 | $$ \  $$|  $$$$$$/| $$$$$$$/| $$$$$$$$         | $$  | $$| $$  | $$   | $$   
 |__/  \__/ \______/ |_______/ |________/         |__/  |__/|__/  |__/   |__/   
 
-Run "help" to list commands
+Run "help" to list all commands
 
 """
 
