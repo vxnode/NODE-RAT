@@ -1,0 +1,9 @@
+If the "run client.bat" dosent work its just crashing it might be the wrong command for your system
+
+Try replacing this line in the bat file
+py client.py
+to this
+python client.py
+Or if you have changed name of the client.py file change it to
+python "example with spaces"
+py examplewithoutspaces
