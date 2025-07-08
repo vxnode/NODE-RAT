@@ -9,7 +9,15 @@ Use at your own risk and always obtain proper permission before accessing any sy
 
 
 
-Install all moudles and packages in the moudle.txt
+Install all moudles and packages in the moudle.txt with this command
+pip install -r moudle.txt
+
+For others it might not work so try these instead
+py -m pip install -r moudle.txt
+py pip install -r moudle.txt
+python -m pip install -r moudle.txt
+python pip install -r moudle.txt
+Have had these problems with many diffrent computers
 
 Go to edit mode in Client.py, line 30
 And change to your computers IPv4
