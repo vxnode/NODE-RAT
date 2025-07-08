@@ -1,3 +1,5 @@
+REMEMBER TO CHECK OUT RELEASES FOR LATEST VERSIONS!
+
 WARNING: This Remote Access Tool (RAT) is intended for educational and ethical purposes only.  
 Unauthorized use or distribution of this software is illegal and may result in severe penalties.  
 Use responsibly and with explicit permission from the target system owner.
