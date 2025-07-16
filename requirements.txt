@@ -1,0 +1,17 @@
+opencv-python
+numpy
+pyautogui
+pynput
+pycryptodome
+pywin32
+
+Hidden imports for converting to exe
+Crypto
+Crypto.Cipher
+Crypto.Cipher.AES
+cv2
+numpy
+pynput
+pynput.mouse
+pynput.keyboard
+win32crypt
